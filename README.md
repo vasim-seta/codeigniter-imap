@@ -49,7 +49,7 @@ You might also want to check `phpinfo()` if the extension is enabled.
 2) Now install the CodeIgniter IMAP package by running the following command:
 
 ``` shell
-composer require Vasim/codeigniter-imap
+composer require vasim-seta/codeigniter-imap
 ```
 
 ## Configuration
@@ -74,17 +74,14 @@ The following encryption methods are supported:
 - `ssl` &mdash; Use SSL
 - `tls` &mdash; Use TLS
 
-Detailed [config/imap.php](src/config/imap.php) configuration:
- - `default` &mdash; used default account
- - `accounts` &mdash; all available accounts
-   - `default` &mdash; default account identifier
-     - `host` &mdash; imap host
-     - `port` &mdash; imap port
-     - `encryption` &mdash; desired encryption method
-     - `validate_cert` &mdash; decide weather you want to verify the certificate or not
-     - `username` &mdash; imap account username
-     - `password` &mdash; imap account password
- - `options` &mdash; additional fetch options
+Detailed [application/config/config.php] configuration:
+ - `host` &mdash; imap host
+ - `port` &mdash; imap port
+ - `encryption` &mdash; desired encryption method
+ - `validate_cert` &mdash; decide weather you want to verify the certificate or not
+ - `username` &mdash; imap account username
+ - `password` &mdash; imap account password
+ - `imap.options` &mdash; additional fetch options
    - `delimiter` &mdash; you can use any supported char such as ".", "/", etc
    - `fetch` &mdash; `FT_UID` (message marked as read by fetching the message) or `FT_PEEK` (fetch the message without setting the "read" flag)
    - `fetch_body` &mdash; If set to `false` all messages will be fetched without the body and any potential attachments
