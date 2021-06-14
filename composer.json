@@ -1,0 +1,39 @@
+{
+    "name": "vasim/codeigniter-imap",
+    "type": "library",
+    "description": "CodeIgniter IMAP client",
+    "keywords": [
+        "vasim",
+        "codeigniter",
+        "imap",
+        "codeigniter-imap",
+        "mail"
+    ],
+    "homepage": "https://github.com/vasim/codeigniter-imap",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vasim Seta",
+            "email": "vasim.seta@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vasim\\IMAP\\": "src/IMAP"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
