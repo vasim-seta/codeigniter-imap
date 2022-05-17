@@ -290,7 +290,7 @@ class Folder {
 
             $query = trim($query);
 
-            $availableMessages = imap_search($this->getClient()->getConnection(), $query, SE_UID, $charset);
+            $availableMessages = imap_search($this->getClient()->getConnection(), $query, SE_UID); //, $charset
 
             if ($availableMessages !== false) {
                 $msglist = 1;
