@@ -262,7 +262,7 @@ class Folder {
      *                  / ( ("+" / "-") 4DIGIT ) ; Local differential
      *                                           ;  hours+min. (HHMM)
      */
-    public function searchMessages(array $where, $fetch_options = null, $fetch_body = true, $charset = "UTF-8", $fetch_attachment = true) {
+    public function searchMessages(array $where, $fetch_options = null, $fetch_body = true, $charset = "", $fetch_attachment = true) {
 
         $this->getClient()->checkConnection();
 
