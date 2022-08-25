@@ -480,7 +480,7 @@ class Message {
         if (is_long($option) === true) {
             $this->fetch_options = $option;
         } elseif (is_null($option) === true) {
-            $config = config('imap.options.fetch', FT_UID);
+            $config = $this->CI->config->item('imap.options.fetch', FT_UID);
             $this->fetch_options = is_long($config) ? $config : 1;
         }
 
@@ -498,7 +498,7 @@ class Message {
         if (is_bool($option)) {
             $this->fetch_body = $option;
         } elseif (is_null($option)) {
-            $config = config('imap.options.fetch_body', true);
+            $config = $this->CI->config->item('imap.options.fetch_body', true);
             $this->fetch_body = is_bool($config) ? $config : true;
         }
 
@@ -516,7 +516,7 @@ class Message {
         if (is_bool($option)) {
             $this->fetch_attachment = $option;
         } elseif (is_null($option)) {
-            $config = config('imap.options.fetch_attachment', true);
+            $config = $this->CI->config->item('imap.options.fetch_attachment', true);
             $this->fetch_attachment = is_bool($config) ? $config : true;
         }
 
